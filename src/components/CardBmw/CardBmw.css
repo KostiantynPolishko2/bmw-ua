@@ -1,1 +1,25 @@
-.CardBmw {}
+:root{
+    --card-width: 250px;
+    --card-height: 350px;
+    --card-shadow-rgb: rgb(179, 176, 176);
+    --propose-width: 100px;
+    --propose-height: 25px;
+}
+
+div.card-bmw {
+    background-color: aqua;
+    width: var(--card-width);
+    height: var(--card-height);
+}
+
+.card-bmw:hover{
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 200ms;
+}
+
+.card-bmw:hover{
+    box-shadow: 3px 5px 7px var(--card-shadow-rgb), -3px 5px 7px var(--card-shadow-rgb), 0px -2px 7px var(--card-shadow-rgb);
+
+}

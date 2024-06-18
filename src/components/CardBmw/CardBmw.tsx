@@ -4,8 +4,8 @@ import './CardBmw.css';
 interface CardBmwProps {}
 
 const CardBmw: FC<CardBmwProps> = () => (
-  <div className="CardBmw">
-    CardBmw Component
+  <div className="card-bmw">
+    <h1>CardBmw Component</h1>
   </div>
 );
 
