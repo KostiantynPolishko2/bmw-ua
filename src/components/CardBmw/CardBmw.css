@@ -1,13 +1,16 @@
 :root{
     --card-width: 250px;
     --card-height: 350px;
+    --card-bg-rgb: rgb(0, 255, 255);
     --card-shadow-rgb: rgb(179, 176, 176);
-    --propose-width: 100px;
-    --propose-height: 25px;
+
+    --propose-width: calc((var(--card-width)*0.7));
+    --propose-height: calc(var(--card-height)*0.09);
+    --propose-bg-rgb: rgb(77, 77, 77);
 }
 
 div.card-bmw {
-    background-color: aqua;
+    background-color: var(--card-bg-rgb);
     width: var(--card-width);
     height: var(--card-height);
 }
@@ -21,5 +24,53 @@ div.card-bmw {
 
 .card-bmw:hover{
     box-shadow: 3px 5px 7px var(--card-shadow-rgb), -3px 5px 7px var(--card-shadow-rgb), 0px -2px 7px var(--card-shadow-rgb);
-
 }
+
+div.card-bmw__propose {
+    height: var(--propose-height);
+    display: flex;
+    flex-direction: row;
+}
+
+.card-bmw__propose {
+    position: relative;
+    top: var(--propose-height);
+    left: 0px;
+}
+
+div.card-bmw__propose > div:first-child{
+    width: var(--propose-width);
+    height: inherit;
+    background-color: var(--propose-bg-rgb);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-bmw__propose > div:first-child {
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.card-bmw__propose > div:first-child i{
+    position: relative;
+    left: 10px;
+}
+
+.card-bmw__propose > div:first-child p{
+    position: relative;
+    left: 17px;
+}
+
+div.card-bmw__propose > div:last-child{
+    position: relative;
+    width: 12px;
+    height: 0px;
+    left: -1px;
+
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: var(--propose-height) solid var(--propose-bg-rgb);
+}
+

@@ -5,7 +5,13 @@ interface CardBmwProps {}
 
 const CardBmw: FC<CardBmwProps> = () => (
   <div className="card-bmw">
-    <h1>CardBmw Component</h1>
+    <div className='card-bmw__propose'>
+      <div>
+        <i className='material-symbols-outlined' style={{fontSize: 15+'px'}}>star</i>
+        <p>СПЕЦІАЛЬНА ПРОПОЗИЦІЯ</p>
+      </div>
+      <div></div>
+    </div>
   </div>
 );
 
