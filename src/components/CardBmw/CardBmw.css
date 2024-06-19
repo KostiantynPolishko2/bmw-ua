@@ -77,7 +77,7 @@ div.card-bmw__propose > div:last-child{
     border-top: var(--propose-height) solid var(--propose-bg-rgb);
 }
 
-div.card-bmw_main{
+div.card-bmw__main{
     position: relative;
     top: calc(var(--propose-height)*1);
     margin: auto;
@@ -86,7 +86,7 @@ div.card-bmw_main{
     background-color: chartreuse;
 }
 
-div.card-bmw_main > img {
+div.card-bmw__main > img {
     width: 100%;
     height: 33%;
 }
@@ -122,4 +122,36 @@ button.card-bmw__btn {
     transition-duration: 500ms;
     transition-timing-function: ease;
     transition-delay: 300ms;
+}
+
+div.card-bmw__main-date {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    background-color: yellow;
+    width: 100%;
+    height: calc(67% - var(--btn-height) - var(--propose-height));
+}
+
+.card-bmw__main-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.card-bmw__main-date > p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: blue;
+}
+
+div.card-bmw__main-date__text {
+    background-color: brown;
+}
+
+div.card-bmw__main-date__text > p {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
