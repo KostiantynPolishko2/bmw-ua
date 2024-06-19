@@ -4,6 +4,7 @@ div.card-bmw {
     background-color: var(--card-bg-rgb);
     width: var(--card-width);
     height: var(--card-height);
+    margin: 5px;
 }
 
 .card-bmw:hover{

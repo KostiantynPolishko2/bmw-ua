@@ -4,14 +4,7 @@ import './CardBmwPropose.css';
 import IconInfo from './CardBmwIconInfo';
 
 interface CardBmwProps {
-  model: string;
-  isPropose: boolean;
-  imgName: string;
-  powerkWt: number;
-  powerHorse: number;
-  consume: number;
-  emission: number;
-  price: number;
+  auto: {model: string, isPropose: boolean, imgName: string, powerkWt: number, powerHorse: number, consume: number, emission: number, price: number};
 }
 
 const propose = (flag: boolean) => {
@@ -30,20 +23,22 @@ const propose = (flag: boolean) => {
 
 const CardBmw = (props : CardBmwProps) => {
 
+  const {model = 'unknown', isPropose, imgName, powerkWt, powerHorse, consume, emission, price} = props.auto;
+
   return(
     <div className="card-bmw">
-      {propose(props.isPropose)}
+      {propose(isPropose)}
       <div className='card-bmw__main'>
-        <img src={require(`./img/${props.imgName}`)} alt={props.model == 'unknown'? 'auto logo' : props.model}></img>
+        <img src={require(`../CardBmwData/img/${imgName}`)} alt={model == 'unknown'? 'auto logo' : model}></img>
         <div className='card-bmw__main-date'>
-          <p>{props.model}</p>
+          <p>{model}</p>
           <div className='card-bmw__main-date__text'>
-            <p>{props.powerkWt} кВт ({props.powerHorse} к.с.)</p>
-            <p>{props.consume} л/100км</p>
-            <p>Викиди СО2 {props.emission} 0 гм/км</p>
+            <p>{powerkWt} кВт ({powerHorse} к.с.)</p>
+            <p>{consume} л/100км</p>
+            <p>Викиди СО2 {emission} 0 гм/км</p>
           </div>
           <div className='card-bmw__main-date__price-icon-info'>
-            <p>{props.price > 1000 ? `${Math.trunc(props.price/1000)} ` : ''}{props.price%1000} грн</p>
+            <p>{price > 1000 ? `${Math.trunc(price/1000)} ` : ''}{price%1000} грн</p>
             <IconInfo />
           </div>
         </div>
@@ -55,14 +50,7 @@ const CardBmw = (props : CardBmwProps) => {
 }
 
 CardBmw.defaultProps = {
-  model: 'unknown',
-  isPropose: false,
-  imgName: 'error404.jpg',
-  powerkWt: 0,
-  powerHorse: 0,
-  consume: 0,
-  emission: 0,
-  price: 0,
+  auto: {model: 'unknown', isPropose: false, imgName: 'error404.jpg', powerkWt: 0, powerHorse: 0, consume: 0, emission: 0, price: 0},
 }
 
 export default CardBmw;

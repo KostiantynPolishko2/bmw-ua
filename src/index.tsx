@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'the-new-css-reset';
 import './index.css';
-import CardBmw from './components/CardBmw/CardBmw';
+import bmwData from './components/CardBmwData/CardBmdData';
+import CardBmwEnum from './components/CardBmvEnum/CardBmwEnum';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -10,16 +11,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <CardBmw 
-    imgName = 'bmw320d_xdrive.png'
-    isPropose = {true} 
-    model='BMW 320d xDrive' 
-    powerkWt={140}
-    powerHorse={190}
-    consume={5.1}
-    emission={133}
-    price={199327}
-    />
+    <main>
+      <CardBmwEnum cars = {bmwData}/>
+    </main>
   </React.StrictMode>
 );
 
