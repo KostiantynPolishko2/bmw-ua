@@ -1,0 +1,90 @@
+@import url('./CardBwmSize.css');
+
+div.card-bmw {
+    background-color: var(--card-bg-rgb);
+    width: var(--card-width);
+    height: var(--card-height);
+}
+
+.card-bmw:hover{
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 150ms;
+}
+
+.card-bmw:hover{
+    box-shadow: 3px 5px 7px var(--card-shadow-rgb), -3px 5px 7px var(--card-shadow-rgb), 0px -2px 7px var(--card-shadow-rgb);
+}
+
+div.card-bmw__main{
+    position: relative;
+    top: calc(var(--propose-height)*1);
+    margin: auto;
+    width: 85%;
+    height: calc(var(--card-height) - calc(var(--propose-height) * 3));
+}
+
+div.card-bmw__main > img {
+    width: 100%;
+    height: 33%;
+}
+
+button.card-bmw__btn {
+    width: 100%;
+    height: var(--btn-height);
+    background-color: var(--card-bg-rgb);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.card-bmw__btn {
+    color: var(--card-bg-rgb);
+    font-weight: 600;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-bmw:hover .card-bmw__btn {
+    background-color: var(--btn-bg-rgb);
+    color: white;
+
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 300ms;
+}
+
+div.card-bmw__main-date {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: calc(67% - var(--btn-height) - var(--propose-height));
+}
+
+.card-bmw__main-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.card-bmw__main-date > p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.card-bmw__main-date__text > p {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.card-bmw__main-date__price-icon-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
