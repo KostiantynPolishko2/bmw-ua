@@ -22,7 +22,7 @@ div.card-bmw {
     transition-property: all;
     transition-duration: 500ms;
     transition-timing-function: ease;
-    transition-delay: 200ms;
+    transition-delay: 150ms;
 }
 
 .card-bmw:hover{
@@ -100,7 +100,7 @@ img{
 button.card-bmw__btn {
     width: 100%;
     height: var(--btn-height);
-    background-color: var(--btn-bg-rgb);
+    background-color: var(--card-bg-rgb);
     text-align: center;
     position: absolute;
     left: 0;
@@ -108,8 +108,18 @@ button.card-bmw__btn {
 }
 
 .card-bmw__btn {
-    color: white;
+    color: var(--card-bg-rgb);
     font-weight: 600;
     font-size: 15px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-bmw:hover .card-bmw__btn {
+    background-color: var(--btn-bg-rgb);
+    color: white;
+
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 300ms;
 }
