@@ -19,6 +19,26 @@ const propose = (flag: boolean) => {
       </div>
     );
   }
+
+  return (
+    <div className='card-bmw__propose'></div>
+  );
+}
+
+const carConsume = (consume: number = 0) => {
+  if (consume){
+    return (<p>{consume} л/100км</p>);
+  }
+
+  return (<p style={{color: 'transparent'}}>empty</p>);
+}
+
+const carEmission = (emission: number = 0) => {
+  if (emission){
+    return (<p>Викиди СО2 {emission} 0 гм/км</p>);
+  }
+
+  return (<p style={{color: 'transparent'}}>empty</p>);
 }
 
 const CardBmw = (props : CardBmwProps) => {
@@ -34,8 +54,8 @@ const CardBmw = (props : CardBmwProps) => {
           <p>{model}</p>
           <div className='card-bmw__main-date__text'>
             <p>{powerkWt} кВт ({powerHorse} к.с.)</p>
-            <p>{consume} л/100км</p>
-            <p>Викиди СО2 {emission} 0 гм/км</p>
+            {carConsume(consume)}
+            {carEmission(emission)}
           </div>
           <div className='card-bmw__main-date__price-icon-info'>
             <p>{price > 1000 ? `${Math.trunc(price/1000)} ` : ''}{price%1000} грн</p>
