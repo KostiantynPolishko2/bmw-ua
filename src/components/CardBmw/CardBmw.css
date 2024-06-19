@@ -1,12 +1,15 @@
 :root{
     --card-width: 250px;
-    --card-height: 350px;
+    --card-height: 400px;
     --card-bg-rgb: rgb(0, 255, 255);
     --card-shadow-rgb: rgb(179, 176, 176);
 
     --propose-width: calc((var(--card-width)*0.7));
     --propose-height: calc(var(--card-height)*0.09);
     --propose-bg-rgb: rgb(77, 77, 77);
+
+    --btn-bg-rgb: rgb(28, 105, 212);
+    --btn-height: calc(var(--propose-height) * 1.1);
 }
 
 div.card-bmw {
@@ -74,3 +77,39 @@ div.card-bmw__propose > div:last-child{
     border-top: var(--propose-height) solid var(--propose-bg-rgb);
 }
 
+div.card-bmw_main{
+    position: relative;
+    top: calc(var(--propose-height)*1);
+    margin: auto;
+    width: 85%;
+    height: calc(var(--card-height) - calc(var(--propose-height) * 3));
+    background-color: chartreuse;
+}
+
+div.card-bmw_main > img {
+    width: 100%;
+    height: 33%;
+}
+
+img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button.card-bmw__btn {
+    width: 100%;
+    height: var(--btn-height);
+    background-color: var(--btn-bg-rgb);
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.card-bmw__btn {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

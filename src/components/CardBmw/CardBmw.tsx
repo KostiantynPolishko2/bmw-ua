@@ -12,6 +12,10 @@ const CardBmw: FC<CardBmwProps> = () => (
       </div>
       <div></div>
     </div>
+    <div className='card-bmw_main'>
+      <img src={require('./img/bmw_x3_drive.png')} alt='bmw-x3-drive'></img>
+      <button type='button' name='detail' className='card-bmw__btn'>Детальніше</button>
+    </div>
   </div>
 );
 
