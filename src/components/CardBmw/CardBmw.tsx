@@ -21,8 +21,11 @@ const CardBmw: FC<CardBmwProps> = () => (
           <p>5.1 л/100км</p>
           <p>Викиди СО2 133 0 гм/км</p>
         </div>
-        <div>
-          <p>199 327 грн</p>    
+        <div className='card-bmw__main-date__price-icon-info'>
+          <p>199 327 грн</p>
+          <div className='card-bmw__icon-info'>
+            <p>i</p>
+          </div>  
         </div>
       </div>
       <button type='button' name='detail' className='card-bmw__btn'>Детальніше</button>
