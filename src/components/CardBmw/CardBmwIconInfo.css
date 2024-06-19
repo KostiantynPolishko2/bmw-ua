@@ -1,0 +1,32 @@
+:root{
+    --icon-info-size: 20px;
+    --icon-shadow-rgb: rgb(179, 176, 176);
+}
+
+div.card-bmw__icon-info {
+    width: var(--icon-info-size);
+    height: var(--icon-info-size);
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.card-bmw__icon-info {
+    background-color: rgb(241, 231, 231);
+    border: 2px solid grey;
+    transition: all 500ms ease 250ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bmw__icon-info > p {
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card-bmw__icon-info:hover {
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 4px 4px var(--icon-shadow-rgb);
+}

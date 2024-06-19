@@ -1,0 +1,13 @@
+:root{
+    --card-width: 250px;
+    --card-height: 400px;
+    --card-bg-rgb: rgb(234, 255, 255);
+    --card-shadow-rgb: rgb(179, 176, 176);
+
+    --propose-width: calc((var(--card-width)*0.7));
+    --propose-height: calc(var(--card-height)*0.09);
+    --propose-bg-rgb: rgb(77, 77, 77);
+
+    --btn-bg-rgb: rgb(28, 105, 212);
+    --btn-height: calc(var(--propose-height) * 1.1);
+}

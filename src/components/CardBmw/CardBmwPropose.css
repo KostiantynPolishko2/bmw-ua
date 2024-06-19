@@ -1,0 +1,49 @@
+@import url('./CardBwmSize.css');
+
+div.card-bmw__propose {
+    height: var(--propose-height);
+    display: flex;
+    flex-direction: row;
+}
+
+.card-bmw__propose {
+    position: relative;
+    top: var(--propose-height);
+    left: 0px;
+}
+
+div.card-bmw__propose > div:first-child{
+    width: var(--propose-width);
+    height: inherit;
+    background-color: var(--propose-bg-rgb);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card-bmw__propose > div:first-child {
+    font-size: 10px;
+    font-weight: 600;
+    color: white;
+}
+
+.card-bmw__propose > div:first-child i{
+    position: relative;
+    left: 10px;
+}
+
+.card-bmw__propose > div:first-child p{
+    position: relative;
+    left: 17px;
+}
+
+div.card-bmw__propose > div:last-child{
+    position: relative;
+    width: 12px;
+    height: 0px;
+    left: -1px;
+
+    border-left: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: var(--propose-height) solid var(--propose-bg-rgb);
+}
