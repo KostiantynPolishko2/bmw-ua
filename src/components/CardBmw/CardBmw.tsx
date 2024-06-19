@@ -4,9 +4,9 @@ import './CardBmwPropose.css';
 import IconInfo from './CardBmwIconInfo';
 
 interface CardBmwProps {
-  imgName: string;
-  isPropose: boolean;
   model: string;
+  isPropose: boolean;
+  imgName: string;
   powerkWt: number;
   powerHorse: number;
   consume: number;
@@ -55,9 +55,9 @@ const CardBmw = (props : CardBmwProps) => {
 }
 
 CardBmw.defaultProps = {
-  imgName: 'error404.jpg',
-  isPropose: false,
   model: 'unknown',
+  isPropose: false,
+  imgName: 'error404.jpg',
   powerkWt: 0,
   powerHorse: 0,
   consume: 0,
