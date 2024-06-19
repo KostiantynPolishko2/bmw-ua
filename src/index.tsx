@@ -10,7 +10,16 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <CardBmw/>
+    <CardBmw 
+    imgName = 'bmw320d_xdrive.png'
+    isPropose = {true} 
+    model='BMW 320d xDrive' 
+    powerkWt={140}
+    powerHorse={190}
+    consume={5.1}
+    emission={133}
+    price={199327}
+    />
   </React.StrictMode>
 );
 
