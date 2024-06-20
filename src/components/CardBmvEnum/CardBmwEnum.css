@@ -1,5 +1,5 @@
 div.card-bmw__scroll-container {
-    width: calc(var(--card-width)*2 + 90px);
+    width: calc(var(--card-width)*3 + 30px);
     height: calc(var(--card-height) + 25px);
     overflow-y: hidden;
     overflow-x: scroll;
@@ -9,7 +9,7 @@ div.card-bmw__scroll-container {
 
 
 div.card-bmw__scroll-page {
-    width: calc(var(--card-width)*2 + 90px);
+    width: calc(var(--card-width)*3 + 90px);
     height: calc(var(--card-height) + 10px);
     background-color: rgb(255, 235, 211);
 }
