@@ -1,0 +1,34 @@
+div.card-bmw__scroll-container {
+    width: calc(var(--card-width)*2 + 90px);
+    height: calc(var(--card-height) + 25px);
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+}
+
+
+div.card-bmw__scroll-page {
+    width: calc(var(--card-width)*2 + 90px);
+    height: calc(var(--card-height) + 10px);
+    background-color: rgb(255, 235, 211);
+}
+
+.card-bmw__scroll-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav.card-bmw_menu {
+    text-align: center;
+}
+
+a.card-bmw_pagination {
+    display: inline-block;
+    width: 50px;
+    text-decoration: none;
+    background-color: yellow;
+    margin: 2px;
+    border: 1px solid black;
+}
