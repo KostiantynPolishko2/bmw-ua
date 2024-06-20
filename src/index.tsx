@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'the-new-css-reset';
 import './index.css';
-import App from './App';
+import bmwData from './components/CardBmwData/CardBmdData';
+import CardBmwEnum from './components/CardBmvEnum/CardBmwEnum';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -9,7 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+  <CardBmwEnum cars = {bmwData}/>
   </React.StrictMode>
 );
 
