@@ -1,35 +1,64 @@
-import React, { FC } from 'react';
+import React from 'react';
 import './CardBmw.css';
 import './CardBmwPropose.css';
 import IconInfo from './CardBmwIconInfo';
 
-interface CardBmwProps {}
+interface CardBmwProps {
+  auto: {model: string, isPropose: boolean, imgName: string, powerkWt: number, powerHorse: number, consume: number, emission: number, price: number};
+}
 
-const CardBmw: FC<CardBmwProps> = () => {
+const propose = (flag: boolean) => {
+  if (flag){
+    return(
+      <div className='card-bmw__propose'>
+        <div>
+            <i className='material-symbols-outlined' style={{fontSize: 15+'px'}}>star</i>
+            <p>СПЕЦІАЛЬНА ПРОПОЗИЦІЯ</p>
+        </div>
+        <div></div>
+      </div>
+    );
+  }
 
-  const propose =   
-  <div className='card-bmw__propose'>
-    <div>
-        <i className='material-symbols-outlined' style={{fontSize: 15+'px'}}>star</i>
-        <p>СПЕЦІАЛЬНА ПРОПОЗИЦІЯ</p>
-    </div>
-    <div></div>
-  </div>
+  return (
+    <div className='card-bmw__propose'></div>
+  );
+}
+
+const carConsume = (consume: number = 0) => {
+  if (consume){
+    return (<p>{consume} л/100км</p>);
+  }
+
+  return (<p style={{color: 'transparent'}}>empty</p>);
+}
+
+const carEmission = (emission: number = 0) => {
+  if (emission){
+    return (<p>Викиди СО2 {emission} 0 гм/км</p>);
+  }
+
+  return (<p style={{color: 'transparent'}}>empty</p>);
+}
+
+const CardBmw = (props : CardBmwProps) => {
+
+  const {model = 'unknown', isPropose, imgName, powerkWt, powerHorse, consume, emission, price} = props.auto;
 
   return(
     <div className="card-bmw">
-      {propose}
+      {propose(isPropose)}
       <div className='card-bmw__main'>
-        <img src={require('./img/bmw_x3_drive.png')} alt='bmw-x3-drive'></img>
+        <img src={require(`../CardBmwData/img/${imgName}`)} alt={model == 'unknown'? 'auto logo' : model}></img>
         <div className='card-bmw__main-date'>
-          <p>BMW 320d xDrive</p>
+          <p>{model}</p>
           <div className='card-bmw__main-date__text'>
-            <p>140 кВт (190 к.с.)</p>
-            <p>5.1 л/100км</p>
-            <p>Викиди СО2 133 0 гм/км</p>
+            <p>{powerkWt} кВт ({powerHorse} к.с.)</p>
+            {carConsume(consume)}
+            {carEmission(emission)}
           </div>
           <div className='card-bmw__main-date__price-icon-info'>
-            <p>199 327 грн</p>
+            <p>{price > 1000 ? `${Math.trunc(price/1000)} ` : ''}{price%1000} грн</p>
             <IconInfo />
           </div>
         </div>
@@ -37,16 +66,11 @@ const CardBmw: FC<CardBmwProps> = () => {
       </div>
     </div>
   );
+  
 }
 
-const CardBmwPropose = () => (
-  <div className='card-bmw__propose'>
-      <div>
-          <i className='material-symbols-outlined' style={{fontSize: 15+'px'}}>star</i>
-          <p>СПЕЦІАЛЬНА ПРОПОЗИЦІЯ</p>
-      </div>
-      <div></div>
-  </div>  
-);
+CardBmw.defaultProps = {
+  auto: {model: 'unknown', isPropose: false, imgName: 'error404.jpg', powerkWt: 0, powerHorse: 0, consume: 0, emission: 0, price: 0},
+}
 
 export default CardBmw;

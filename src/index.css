@@ -12,3 +12,10 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
